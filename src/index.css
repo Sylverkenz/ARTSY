@@ -1,0 +1,589 @@
+@tailwind components;
+@tailwind base;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@media (min-width: 1100px) {
+  *::-webkit-scrollbar {
+    width: 6px;
+  }
+  *::-webkit-scrollbar-track {
+    background: gainsboro;
+    border-radius: 5px;
+  }
+  *::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 5px;
+  }
+}
+
+html {
+  font-size: 62.5%;
+}
+
+a {
+  @apply inline-block;
+}
+
+img {
+  @apply w-full h-full object-cover;
+}
+
+.logotext {
+  @apply font-STIX font-bold text-[2.8rem];
+}
+
+.basetext {
+  @apply font-Satoshi font-normal text-[2rem] leading-[3.2rem];
+}
+
+.baseBtext {
+  @apply font-Satoshi font-medium text-[1.6rem] sm:text-[2rem] leading-[2.5rem] sm:leading-[3.2rem];
+}
+
+.pricetext {
+  @apply font-Satoshi text-[#333] font-bold text-[2.4rem] leading-[4.2rem];
+}
+
+.imgbox {
+  @apply mdl:w-[50%] px-8 mdl:px-[6rem] py-10 border-t mdl:border-t-0  mdl:border-r mdl:border-[#333] h-[40rem] mdl:h-auto;
+}
+
+.title {
+  @apply flex  items-center justify-between px-8 mdl:px-[4rem]  mdl:py-[3rem] capitalize mdl:border-b border-[#333];
+}
+
+.maindesc {
+  @apply px-[2rem] py-6 mdl:py-[5rem] capitalize;
+}
+
+.maindesc h5 {
+  @apply font-Satoshi text-[1.8rem] mdl:text-[2.5rem] text-[#616161] mb-[2rem];
+}
+
+.nametext {
+  @apply font-Satoshi font-medium mdl:font-bold text-[2rem] mdl:text-[4rem] uppercase mdl:capitalize leading-[4.2rem];
+}
+
+.ethtext {
+  @apply font-STIX font-medium text-[#333] text-[3.5rem] mdl:flex items-center hidden;
+}
+
+.usdtext {
+  @apply font-Satoshi font-medium text-[1.8rem];
+}
+
+.heroimgs {
+  @apply px-4 my-[8rem];
+}
+
+/* .heroimgs img {
+  @apply max-w-[30rem];
+} */
+
+.heroimgs article {
+  @apply w-[32rem] overflow-hidden;
+}
+
+.herotext h1 {
+  @apply font-CDisplay font-medium sm:font-semibold leading-[4.8rem] sm:leading-[8rem] text-[3.2rem] sm:text-[6rem] w-[85%] md:w-full mx-auto mb-[2rem];
+}
+
+.herotext p {
+  @apply w-[82%] md:w-full mx-auto;
+}
+
+.prodlink {
+  @apply font-CDisplay font-normal text-white capitalize text-[3.5rem] absolute top-0 left-0 w-full h-full grid invisible opacity-0 group-hover:visible group-hover:opacity-100 group-hover:bg-[rgba(0,0,0,0.6)] place-items-center duration-500;
+}
+
+.auction-overview {
+  background: linear-gradient(
+    99.99deg,
+    #4693ed -26.21%,
+    #79c2d2 22.16%,
+    rgba(192, 86, 9, 0.49) 111.62%
+  );
+  @apply px-6 mdl:px-[10rem] py-[3rem] font-Satoshi overflow-hidden;
+}
+
+.auction-overview .auction-title {
+  @apply font-Satoshi text-white text-[3rem] capitalize hidden sm:block;
+}
+
+.auction-overview .texts {
+  @apply absolute top-0 left-0 w-full h-full flex sm:gap-8 items-center sm:items-end flex-wrap sm:flex-nowrap p-4 sm:p-12 md:p-16 text-white bg-[rgba(0,0,0,0.5)] uppercase;
+}
+
+.auction-overview .texts span {
+  @apply text-[4rem] sm:text-[6rem] font-Bellefair sm:mb-[10rem];
+}
+
+.auction-overview .texts article h5 {
+  @apply text-[2.5rem] font-Bellefair mb-[1.5rem] sm:w-[30rem] relative;
+}
+
+.auction-overview .texts article h5::before {
+  content: "";
+  @apply hidden sm:block absolute top-[8%] left-[-2rem] w-[1.3rem] h-[1.3rem] rounded-full bg-white;
+}
+
+.auction-overview .texts article h6 {
+  @apply text-[1.3rem]  mb-[1.3rem] font-Poppins;
+}
+
+.slide_buttons {
+  @apply bg-[#AEAEAE] h-[1rem] w-[20rem] relative rounded-full overflow-hidden hidden sm:inline-flex;
+}
+
+.slide_buttons button {
+  transition: left 0.75s;
+  @apply absolute top-0 w-[5rem] h-[1rem] rounded-full;
+}
+
+.dir_buttons button {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 7.77035px 7.77035px 11.6555px rgba(0, 0, 0, 0.15);
+  @apply w-24 h-24 rounded-full inline-grid place-items-center ml-8 text-white text-[1.4rem];
+}
+
+.home_links {
+  @apply my-[6rem] mdl:my-[10rem] font-Satoshi font-medium text-[2rem] mdl:text-[4.2rem] capitalize border-y;
+}
+
+.home_links a {
+  @apply flex items-center justify-between py-[2rem] mdl:py-[4rem] pl-6 pr-6 mdl:pl-[10rem] mdl:pr-[25rem];
+}
+
+.home_links a span {
+  @apply text-[#4693ED];
+}
+
+.home_links a:first-of-type {
+  @apply border-b;
+}
+
+.creators .texts h4 {
+  @apply text-[3rem] sm:text-[4.5rem] uppercase font-bold text-center  absolute right-[8%] top-[80%];
+}
+.creators .texts h4 span {
+  text-decoration: line-through;
+  @apply text-[6rem] sm:text-[15rem] block;
+}
+.creators .texts h5 {
+  @apply text-[2.2rem] sm:text-[5rem] uppercase font-semibold;
+}
+.creators .texts p {
+  @apply text-[1.5rem] sm:text-[2.7rem] text-[rgba(0,0,0,0.57)] mt-8 sm:mt-[12rem] mb-[5rem] mdl:mb-[15rem] mdl:w-[85%];
+}
+
+.creators .imgcon {
+  @apply w-[30rem] sm:w-[60rem] h-[30rem] sm:h-[65rem] absolute top-[20%] left-[15%] mdl:left-[30%];
+}
+
+.newsletter {
+  @apply sm:border border-[#333]  sm:py-[5rem];
+}
+
+.newsletter h5 {
+  @apply font-Bellefair uppercase text-[3rem] mb-6;
+}
+.newsletter p {
+  @apply font-Satoshi text-[3rem] mb-12 hidden sm:block;
+}
+
+.newsletter h6 {
+  @apply sm:hidden font-Satoshi text-[1.4rem] mb-12 uppercase;
+}
+
+.newsletter form {
+  @apply flex flex-col sm:flex-row items-center justify-center gap-8 font-Bellefair text-[1.6rem];
+}
+
+.newsletter input {
+  @apply border border-[#333]  text-[#333] py-[1.5rem] w-full sm:w-[50%] mdl:w-[35%] px-[5rem] uppercase placeholder:text-[#333];
+}
+
+.newsletter button {
+  @apply px-[4rem] py-[1.5rem] uppercase text-white bg-[#333];
+}
+
+footer {
+  @apply px-6 mdl:px-[10rem] py-[6rem];
+}
+
+.footer {
+  @apply flex items-center justify-between font-Satoshi text-[1.8rem] sm:text-[2.5rem];
+}
+
+.footer h1 {
+  @apply font-CDisplay font-semibold text-[4.5rem] uppercase hidden md:block;
+}
+
+.footer a {
+  @apply capitalize;
+}
+
+.footer article {
+  @apply flex flex-col gap-8;
+}
+
+.footer article:not(:last-of-type) {
+  @apply hidden md:flex;
+}
+.footer article p {
+  @apply flex items-center gap-8;
+}
+
+.footer svg {
+  @apply text-[2rem] sm:text-[4rem];
+}
+
+.ethtext span {
+  @apply mr-4;
+}
+
+.addtocart {
+  @apply inline-block bg-[#3341C1] py-6 px-[5rem] font-Satoshi font-medium text-[2.2rem] text-white cursor-pointer;
+}
+
+.carousel {
+  @apply overflow-hidden capitalize text-[2.8rem] border-t border-[#333] duration-500;
+}
+
+.amountb span {
+  @apply inline-block px-4 mdl:px-6 py-2  cursor-pointer;
+}
+
+.primary a {
+  @apply text-[#292929] opacity-80 border-b-2 border-transparent duration-500;
+}
+
+.primary a span {
+  @apply block bg-[#292929] h-1 rounded-full mx-auto;
+}
+
+.product {
+  box-shadow: 0px 34px 68px rgba(217, 225, 244, 0.36);
+}
+
+.sort {
+  box-shadow: 4px 4px 64px rgba(0, 0, 0, 0.1);
+}
+.filtermobile {
+  @apply bg-white mdl:hidden p-8 rounded-[8px];
+  box-shadow: 4px 4px 64px rgba(0, 0, 0, 0.1);
+}
+
+.carttitles h5 {
+  @apply text-[#888] border-b-2 border-transparent pb-1 cursor-pointer duration-[750ms];
+}
+.carttitles h5.active {
+  @apply text-[#000] border-b-2 border-[#000];
+}
+
+.cartDesc h5 {
+  @apply mb-6;
+}
+
+.cartDesc h5:not(:first-of-type) {
+  @apply hidden mdl:block;
+}
+.empty {
+  @apply text-center text-[3rem] capitalize;
+}
+
+.empty a {
+  @apply inline-block bg-[#3341C1] my-6 py-4 px-[5rem] font-Satoshi font-medium text-[2.2rem] text-white cursor-pointer rounded-[5px];
+}
+
+.checkout {
+  @apply text-[2.2rem] capitalize;
+}
+
+.checkout a {
+  @apply block text-center text-[#3341c1] underline;
+}
+
+.checkout button {
+  @apply bg-[#3341C1] w-full my-8 py-8 px-4 mdl:px-[8rem] font-Satoshi font-medium  text-white cursor-pointer rounded-[3px] capitalize;
+}
+
+.totals h5 {
+  @apply flex justify-between font-Satoshi text-[2.2rem] mb-4;
+}
+
+.totals h5 span:first-child {
+  @apply text-[#999];
+}
+.totals h5 span:last-child {
+  @apply font-STIX text-[2.4rem];
+}
+
+.form-control {
+  @apply mb-[5rem];
+}
+.form-control h5 {
+  @apply baseBtext capitalize mb-4;
+}
+
+.shippingform input {
+  @apply block bg-[#f2f2f2] border-[0.05rem] border-[#74747465] h-[6rem] w-full mdl:w-[80%] rounded-[1rem] py-4 px-12 outline-none;
+}
+
+.shippingform button {
+  @apply w-full mdl:w-[75%] bg-[#3341C1] my-6 py-8 mdl:px-[8rem] font-Satoshi font-medium  text-white cursor-pointer rounded-[3px] capitalize;
+}
+
+.deliverydetail p {
+  @apply mb-4;
+}
+
+.liveform {
+  background-image: linear-gradient(to right, #78a3ad 49%, #c05609 100%);
+  @apply h-[5.4rem] w-[40.4rem] rounded-[25px] overflow-hidden relative;
+}
+
+.liveform input {
+  @apply h-[5rem] w-[40rem] rounded-[23px] absolute top-[.2rem] left-[.2rem] border-none outline-none px-[3rem] text-[1.8rem] text-[#616161] font-Satoshi;
+}
+
+.overlaytexts {
+  @apply flex flex-col justify-between absolute top-0 left-0 bottom-0 text-white p-12 w-[95%] font-Satoshi;
+}
+
+.overlaytexts div {
+  @apply flex justify-between items-center;
+}
+
+#scroller::-webkit-scrollbar {
+  width: 0;
+}
+
+.live {
+  animation: disco 4s ease-in-out infinite;
+}
+.like {
+  animation: disco2 4s ease-in-out infinite;
+}
+
+.submit-btn {
+  animation: rotate 2s ease-in-out 3;
+}
+
+.floatlikes {
+  @apply absolute bottom-16 right-[-2rem]  mdl:bottom-[-3rem] mdl:right-[12rem] w-[8rem] h-[20rem];
+}
+.floatlikes span {
+  animation: disco2 3s ease-in-out infinite;
+  @apply absolute;
+}
+
+.floatlikes span:nth-of-type(1) {
+  animation: fLikes3 1s ease-in-out infinite;
+  @apply text-[#4693ED]  top-8 left-8 text-[1.8rem];
+}
+.floatlikes span:nth-of-type(2) {
+  animation: fLikes2 1s ease-in-out infinite;
+  @apply text-[#E31616]  top-20 text-[1.6rem] rotate-[-56deg];
+}
+.floatlikes span:nth-of-type(3) {
+  animation: fLikes1 1s ease-in-out infinite;
+  @apply text-[#4693ed]  top-32 left-8 text-[2.4rem];
+}
+.floatlikes span:nth-of-type(4) {
+  animation: fLikes3 1s ease-in-out infinite;
+  @apply text-[#36F46B]  top-44 text-[1.6rem] rotate-[-28deg];
+}
+.floatlikes span:nth-of-type(5) {
+  animation: fLikes2 1s ease-in-out infinite;
+  @apply text-[#9747FF]  top-56 text-[2.5rem] rotate-[-25deg];
+}
+.floatlikes span:nth-of-type(6) {
+  animation: fLikes1 1s ease-in-out infinite;
+  @apply text-[#F44336]  top-[17rem] left-8 text-[1.6rem] rotate-[-56deg];
+}
+
+.overlay {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), transparent);
+  @apply absolute top-0 left-0 w-full h-[35%];
+}
+
+#icon {
+  box-shadow: 4.68154px 4.68154px 7.02232px rgba(0, 0, 0, 0.15);
+  @apply grid place-items-center w-[4.2rem] h-[4.2rem] sm:w-[5rem] sm:h-[5rem] rounded-full bg-[rgba(255,255,255,0.2)] backdrop-blur-[5px] text-white text-[1.5rem] sm:text-[2rem]  absolute z-10 top-[42%] sm:top-[33%] md:top-[29%] mdl:top-[50%] cursor-pointer;
+}
+
+.wrapper .slider {
+  white-space: nowrap;
+}
+
+.topBids {
+  @apply flex flex-col sm:flex-row gap-y-12 justify-between items-center px-8 mdl:px-[10rem];
+}
+
+.textDesc h5 {
+  @apply flex justify-between mdl:w-[55%] mb-6 text-[#616161];
+}
+
+.textDesc h5:nth-of-type(3) {
+  @apply hidden mdl:block;
+}
+
+.textDesc h5 span {
+  @apply text-black;
+}
+
+.topBids article {
+  @apply w-[100%] sm:w-[47%] mdl:w-[45%];
+}
+
+.dropTitle {
+  @apply text-center mb-[7rem];
+}
+.dropTitle h5 {
+  @apply text-[3rem] mdl:text-[4rem] font-bold mdl:font-medium mb-[2rem];
+}
+.dropTitle p {
+  @apply text-[1.8rem] mdl:text-[3rem] text-[#616161] mb-[2rem];
+}
+.dropTitle button {
+  @apply text-[2rem] mdl:text-[3.3rem] font-medium px-[6rem] py-2 rounded-[1rem] border border-[#000];
+}
+
+.loginPage {
+  @apply fixed top-0 left-0 bg-white font-Satoshi text-[2rem] capitalize w-full h-full  px-8 mdl:px-[10rem];
+}
+.signInPage {
+  @apply fixed top-0 left-0  font-Satoshi text-[2rem] capitalize w-full h-full bg-white  px-8 mdl:px-[10rem];
+}
+
+.signInPage header {
+  @apply flex justify-between items-center h-[10rem] mb-[0rem];
+}
+.signInPage main {
+  @apply flex justify-between items-center mb-[0rem];
+}
+.loginPage main {
+  @apply flex-row-reverse;
+}
+
+.signInPage form {
+  @apply flex flex-col gap-[3rem] w-[43%] px-[4rem] py-8 text-[#424546];
+}
+
+.signInPage h4 {
+  @apply text-center; 
+}
+
+.inputbox {
+  @apply relative h-[5.5rem] text-[#424546];
+}
+
+.inputbox input {
+  @apply border border-[#424546] w-full h-full pl-[5rem] py-2 outline-none rounded-[10px] duration-300;
+}
+
+.inputbox input:valid {
+  @apply border-[#39D966] border-2;
+}
+
+.inputbox label {
+  @apply absolute top-5 left-[4.1rem]  text-[1.7rem] text-[#B1B2B2]  px-3 duration-300;
+}
+.inputbox article {
+  @apply absolute top-6 left-[1rem] pr-4 border-r border-[#424546];
+}
+
+.inputbox input:valid ~ label,
+.inputbox input:focus ~ label {
+  @apply bg-white text-[1.5rem] -translate-y-[2.35rem];
+}
+
+.signInPage .signup {
+  @apply bg-black text-white text-[1.8rem] h-[5.5rem] rounded-[10px];
+}
+.signInPage .signupGoogle {
+  @apply flex items-center justify-center text-[1.8rem] capitalize h-[5.5rem] rounded-[10px] gap-2 bg-white border border-[#424546] -mt-4;
+}
+
+@keyframes disco {
+  0% {
+    background: #4693ed;
+  }
+  50% {
+    background-color: rgb(255, 0, 55);
+  }
+  100% {
+    background: #4693ed;
+  }
+}
+
+@keyframes disco2 {
+  0% {
+    color: #4693ed;
+  }
+  50% {
+    color: rgb(255, 0, 55);
+  }
+  100% {
+    color: #4693ed;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    opacity: 1;
+    right: 15rem;
+    transform: rotate(45deg);
+  }
+  50% {
+    opacity: 0.7;
+    transform: rotate(45deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes fLikes1 {
+  0% {
+    transform: translateY(1rem) rotate(-56deg);
+  }
+  100% {
+    transform: translateY(-2rem) rotate(0deg);
+  }
+}
+@keyframes fLikes2 {
+  0% {
+    transform: translateY(1rem) rotate(-25deg);
+  }
+  100% {
+    transform: translateY(-1rem) rotate(0deg);
+  }
+}
+@keyframes fLikes3 {
+  0% {
+    transform: translateY(1rem) rotate(-27deg);
+  }
+  100% {
+    transform: translateY(-1rem) rotate(27deg);
+  }
+}
