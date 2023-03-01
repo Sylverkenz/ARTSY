@@ -28,7 +28,7 @@ function SignupPage() {
       await signUp(email, passWord);
       setTimeout(() => {
         navigate("/login");
-      }, 2000);
+      }, 500);
     } catch (error) {
       setError(
         error.message.split(" ").slice(1).join(" ").replaceAll("auth/", "")
@@ -43,13 +43,18 @@ function SignupPage() {
       className="signInPage"
     >
       <header className="">
-        <h5 className="font-CDisplay font-bold text-[3rem]">ARTSY</h5>
-        <Link to="/" className="underline normal-case">
+        <h5 className="font-CDisplay font-bold text-[2.2rem] sm:text-[3rem]">
+          ARTSY
+        </h5>
+        <Link
+          to="/"
+          className="underline normal-case text-[1.6rem] sm:text-[2rem]"
+        >
           Continue as guest
         </Link>
       </header>
-      <motion.main className="" variants={pageAnim}>
-        <div className="formSlider w-[55%] h-[54rem]">
+      <motion.main className="sm:my-[15%] lg:my-0" variants={pageAnim}>
+        <div className="hidden sm:block formSlider sm:w-[50%] lg:w-[55%] h-[54rem]">
           <SigninSlider />
         </div>
         <motion.form onSubmit={handleSubmit} className="signInform">

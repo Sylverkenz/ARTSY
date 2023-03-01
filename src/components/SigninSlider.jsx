@@ -44,12 +44,12 @@ function SigninSlider() {
           initial="hidden"
           animate="show"
           exit="exit"
-          className="absolute top-0 left-0 w-full h-full"
+          className="md:block absolute top-0 left-0 w-full h-full"
         >
           <img src={img} alt="" />
-          <article className="absolute top-0 left-0 text-[3rem] text-[#DEDEDE] flex flex-col gap-12 items-center justify-center font-CDisplay w-full h-full bg-[rgba(0,0,0,.5)]">
-            <h4 className="w-[40rem]">" {quote} "</h4>
-            <h4 className="w-[35rem] italic text-[2.5rem]">-{author}</h4>
+          <article className="absolute top-0 left-0 text-[2rem] lg:text-[3rem] text-[#DEDEDE] flex flex-col gap-12 items-center justify-center font-CDisplay w-full h-full bg-[rgba(0,0,0,.5)]">
+            <h4 className="w-[30rem] lg:w-[40rem]">" {quote} "</h4>
+            <h4 className="w-[25rem] lg:w-[35rem] italic lg:text-[2.5]">-{author}</h4>
           </article>
         </motion.div>
       </AnimatePresence>

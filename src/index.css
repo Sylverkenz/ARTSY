@@ -459,10 +459,10 @@ footer {
 }
 
 .loginPage {
-  @apply fixed top-0 left-0 bg-white font-Satoshi text-[2rem] capitalize w-full h-full  px-8 mdl:px-[10rem];
+  @apply  absolute top-0 left-0 bg-white font-Satoshi text-[2rem] capitalize w-full h-full  px-8 mdl:px-[10rem];
 }
 .signInPage {
-  @apply fixed top-0 left-0  font-Satoshi text-[2rem] capitalize w-full h-full bg-white  px-8 mdl:px-[10rem];
+  @apply absolute top-0 left-0  font-Satoshi text-[2rem] capitalize w-full h-full bg-white  px-8 mdl:px-[10rem];
 }
 
 .signInPage header {
@@ -472,11 +472,11 @@ footer {
   @apply flex justify-between items-center mb-[0rem];
 }
 .loginPage main {
-  @apply flex-row-reverse;
+  @apply sm:flex-row-reverse;
 }
 
 .signInPage form {
-  @apply flex flex-col gap-[3rem] w-[43%] px-[4rem] py-8 text-[#424546];
+  @apply flex flex-col gap-[3rem] w-full sm:w-[50%] lg:w-[43%] sm:px-[2rem] lg:px-[4rem] py-8 text-[#424546];
 }
 
 .signInPage h4 {
@@ -484,7 +484,7 @@ footer {
 }
 
 .inputbox {
-  @apply relative h-[5.5rem] text-[#424546];
+  @apply relative w-full  h-[5.5rem] text-[#424546];
 }
 
 .inputbox input {

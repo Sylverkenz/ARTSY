@@ -24,7 +24,7 @@ function LoginPage() {
       await signIn(email, passWord);
       setTimeout(() => {
         navigate("/");
-      }, 2000);
+      }, 500);
     } catch (error) {
       setError(
         error.message.split(" ").slice(1).join(" ").replaceAll("auth/", "")
@@ -44,11 +44,11 @@ function LoginPage() {
           Continue as guest
         </Link>
       </header>
-      <motion.main className="" variants={pageAnim}>
-        <div className="formSlider w-[55%] h-[54rem]">
+      <motion.main className="sm:my-[15%] lg:my-0" variants={pageAnim}>
+        <div className="hidden sm:block formSlider w-[55%] h-[54rem]">
           <SigninSlider />
         </div>
-        <motion.form onSubmit={handleSubmit} className="signInform">
+        <motion.form onSubmit={handleSubmit} className="w-full">
           <h4>welcome back</h4>
 
           <div className="inputbox">
