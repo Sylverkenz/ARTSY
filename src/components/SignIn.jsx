@@ -22,11 +22,13 @@ function SignIn() {
     setError("");
     try {
       setLoading(true);
+      
       await signUp(email, passWord);
       setTimeout(() => {
         navigate("/login");
-      }, 2000);
+      }, 1000);
     } catch (error) {
+      
       setError(
         error.message.split(" ").slice(1).join(" ").replaceAll("auth/", "")
       );

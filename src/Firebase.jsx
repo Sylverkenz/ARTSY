@@ -2,12 +2,12 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAy-IHmMv68ODedHyF3_qQ2BehUgq0-Ij0",
-  authDomain: "artsy-dev-9668f.firebaseapp.com",
-  projectId: "artsy-dev-9668f",
-  storageBucket: "artsy-dev-9668f.appspot.com",
-  messagingSenderId: "829944167632",
-  appId: "1:829944167632:web:9d6db519acecb5ba0bb2d5",
+  apiKey: "AIzaSyBJKICVSEAH4yAaZa9OgQU7wsmFqN1BmtU",
+  authDomain: "artsy-pro.firebaseapp.com",
+  projectId: "artsy-pro",
+  storageBucket: "artsy-pro.appspot.com",
+  messagingSenderId: "693784633272",
+  appId: "1:693784633272:web:d3908ce20b709085f1794d"
 };
 
 const app = initializeApp(firebaseConfig);

@@ -21,7 +21,7 @@ function LoginPage() {
     e.preventDefault();
     try {
       setLoading(true);
-      await signIn(email, passWord1);
+      await signIn(email, passWord);
       setTimeout(() => {
         navigate("/");
       }, 2000);

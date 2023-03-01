@@ -15,18 +15,21 @@ function LogIn() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log(passWord1, email);
     try {
-      setLoading(true);
       await signIn(email, passWord1);
       setTimeout(() => {
         navigate("/");
-      }, 2000);
+      }, 1000);
     } catch (error) {
+      console.log(error);
       setError(
         error.message.split(" ").slice(1).join(" ").replaceAll("auth/", "")
       );
     }
   };
+
+  console.log(passWord1, email);
 
   return (
     <motion.div
