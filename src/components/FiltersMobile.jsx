@@ -22,7 +22,7 @@ function FiltersMobile() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ type: "tween", duration: 0.35 }}
           exit={{ opacity: 0, y: -200 }}
-          className="filtermobile form-control "
+          className="filtermobile form-control"
         >
           <h5 className="">by category</h5>
           <div className="">
@@ -30,7 +30,7 @@ function FiltersMobile() {
               return (
                 <div
                   key={index}
-                  className="flex gap-6 mb-8 items-center capitalize"
+                  className="flex gap-6 mb-3 lg:mb-8 items-center capitalize"
                   data-name="category"
                   data-value={cat}
                   onClick={filterProducts}
