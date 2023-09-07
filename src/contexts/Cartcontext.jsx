@@ -84,15 +84,21 @@ function reducer(state, action) {
   }
 
   if (action.type === "CARTTOTALS") {
-    const { totalItem, totalAmount } = state.cart.reduce(
-      (total, item) => {
-        const { amount, price } = item;
-        total.totalItem += amount;
-        total.totalAmount += price * amount;
-        return total;
-      },
-      { totalItem: 0, totalAmount: 0 }
-    );
+    // const { totalItem, totalAmount } = state.cart.reduce(
+    //   (total, item) => {
+    //     const { amount, price } = item;
+    //     total.totalItem += amount;
+    //     total.totalAmount += price * amount;
+    //     return total;
+    //   },
+    //   { totalItem: 0, totalAmount: 0 }
+    // );
+    let totalItem = 0;
+    let totalAmount = 0;
+    state.cart.forEach((item) => {
+      totalItem += item.amount;
+      totalAmount += item.amount * item.price;
+    });
     return {
       ...state,
       totalItem,

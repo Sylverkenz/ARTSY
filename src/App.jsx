@@ -32,14 +32,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/market" element={<Marketplace />} />
           <Route path="/market/:id" element={<SingleproductPage />} />
-          <Route
-            path="/cart"
-            element={
-              <ProtectedRoute>
-                <CartPage />
-              </ProtectedRoute>
-            }
-          />
+          <Route path="/cart" element={<CartPage />} />
           <Route path="/signIn" element={<SignupPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/auction" element={<AuctionPage />} />
