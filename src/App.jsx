@@ -36,14 +36,7 @@ function App() {
           <Route path="/signIn" element={<SignupPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/auction" element={<AuctionPage />} />
-          <Route
-            path="/auction/:id"
-            element={
-              <ProtectedRoute>
-                <LiveBid />
-              </ProtectedRoute>
-            }
-          />
+          <Route path="/auction/:id" element={<LiveBid />} />
           <Route path="/drop" element={<DropPage />} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
